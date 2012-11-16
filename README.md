@@ -16,7 +16,7 @@
 
 ## 使用说明
 
-### `placeholder(element)`
+### placeholder(element)
 
 参数是 `element` 要模拟的element，可以是选择器，如果不选，会默认选择整个 body 下的所有`input`及`textarea`。
 
