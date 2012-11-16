@@ -1,0 +1,13 @@
+{
+    "name": "placeholder",
+    "version": "1.0.0",
+    "root": "arale",
+    "description": "针对不支持html5 placeholder的浏览器做兼容",
+    "dependencies": {
+    	"$": "$"
+    },
+    "tests": ["placeholder"],
+    "output": {
+        "placeholder.js": "."
+    }
+}
