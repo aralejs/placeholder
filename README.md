@@ -8,17 +8,17 @@
 
 ## 模拟原理
 
-在不支持placeholder的浏览器中，通过class及value的方式来实现。
+在不支持 placeholder 的浏览器中，通过 className 及 value 的方式来实现。
 
-利用了jQuery的valHooks，使得用户使用`$.val()`接口去操作在操作有placeholder的input时也不会受到影响。
+利用了 jQuery 的 valHooks，使得用户使用`$.val()`接口去操作在操作有 placeholder 的 input 时也不会受到影响。
 
-同时利用jQuery的事件代理，保证了所有的form的submit事件也不会受到影响。
+同时利用 jQuery 的事件代理，保证了所有表单的 submit 事件也不会受到影响。
 
 ## 使用说明
 
 ### placeholder(element)
 
-参数是 `element` 要模拟的element，可以是选择器，如果不选，会默认选择整个 body 下的所有`input`及`textarea`。
+参数是 `element` 要模拟的 element，可以是选择器，如果不选，会默认选择整个 body 下的所有`input`及`textarea`。
 
 > P.S. 如果是模拟的 placeholder，会在 input 元素上追加`className="placeholder"`，__目前该参数不支持更改__
 
