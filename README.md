@@ -1,15 +1,11 @@
 # Placeholder
 
-// 针对不支持html5 placeholder的浏览器做兼容
+---
+
+针对不支持 Html5 placeholder 的占位符兼容解决方案。本组件在已经支持 placeholder 的浏览器下不会做任何事，切记。
 
 ---
 
-## 模块依赖
-
- - seajs
- - jquery
- - [placeholder](https://github.com/mathiasbynens/jquery-placeholder)
- 
 ## 模拟原理
 
 在不支持placeholder的浏览器中，通过class及value的方式来实现。
@@ -22,23 +18,24 @@
 
 ### `placeholder(element)`
 
-	`element` : 要模拟的element，可以是选择器，如果不选，会默认选择整个body下的所有`input`及`textarea`
-	
-	P.S. 如果是模拟的placeholder，会在input元素上追加className`placeholder`，__目前该参数不支持更改__
+参数是 `element` 要模拟的element，可以是选择器，如果不选，会默认选择整个 body 下的所有`input`及`textarea`。
+
+> P.S. 如果是模拟的 placeholder，会在 input 元素上追加`className="placeholder"`，__目前该参数不支持更改__
 
 ## 最佳实践
 
-__以下的方法在已经支持placeholder的浏览器下不会做任何事，切记__
+1. 最简单的用法，直接 use 组件，不需要手动调用任何代码。
 
-1. 最简单的用法
+    ```js
+    seajs.use(['placeholder'], function(placeholder) {
+    
+    });
+    ```
 
-	```js
-	$(function(){
-		placeholder();
-	});
-	```
 2. 针对某些特定的input
 
-	```js
-	placeholder('#test');
-	```
+    ```js
+    seajs.use(['placeholder'], function(placeholder) {
+        placeholder('#test'); 
+    });
+    ```

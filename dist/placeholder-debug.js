@@ -1,4 +1,4 @@
-define(function(require, exports, module) {
+define("arale/placeholder/1.0.0/placeholder-debug", ["$-debug"], function(require, exports, module) {
 
     // placeholder
     // --------
@@ -6,7 +6,7 @@ define(function(require, exports, module) {
     // Thanks to
     // - https://github.com/mathiasbynens/jquery-placeholder
 
-    var $ = require('$'),
+    var $ = require('$-debug'),
         placeholder;
 
     // 以下代码引用，稍微修改了点
