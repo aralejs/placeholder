@@ -27,13 +27,13 @@
 1. 最简单的用法，直接 use 组件，不需要手动调用任何代码。
 
     ```js
-    seajs.use(['placeholder']);
+    seajs.use(['arale/placeholder/{{版本号}}/placeholder']);
     ```
 
 2. 针对某些特定的input
 
     ```js
-    seajs.use(['placeholder'], function(placeholder) {
+    seajs.use(['arale/placeholder/{{版本号}}/placeholder'], function(placeholder) {
         placeholder('#test'); 
     });
     ```
