@@ -24,7 +24,7 @@
 
 ## 最佳实践
 
-1. 最简单的用法，直接 use 组件，不需要手动调用任何代码。
+1. 最简单的用法，直接 use 组件，不需额外调用代码。
 
     ```js
     seajs.use(['arale/placeholder/{{版本号}}/placeholder']);
