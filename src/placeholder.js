@@ -231,7 +231,7 @@ define(function(require, exports, module) {
             element = $('input, textarea');
         }
         if(element){
-            ret.call(element);
+            ret.call($(element));
         }
     } : function(){};
 

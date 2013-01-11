@@ -183,7 +183,7 @@ define("arale/placeholder/1.0.1/placeholder-debug", [ "$-debug" ], function(requ
             element = $("input, textarea");
         }
         if (element) {
-            ret.call(element);
+            ret.call($(element));
         }
     } : function() {};
     // 默认运行，这样就不需要手动调用

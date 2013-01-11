@@ -51,6 +51,6 @@ seajs.use(['$', 'placeholder'], function($, placeholder){
 ````js
 seajs.use(['$', 'placeholder'], function($, placeholder) {
     $('#i-3').attr('placeholder', '后来加上的placeholder');
-    placeholder($('#i-3'));
+    placeholder('#i-3');
 });
 ````
