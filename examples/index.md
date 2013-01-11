@@ -46,11 +46,18 @@ seajs.use(['$', 'placeholder'], function($, placeholder){
 
 ## 示例三：绑定多次
 
-<input id="i-3" placeholder="xxx">
+<input id="i-3">
+
+<button id="b-3">更换placeholder为“再次更换”</button>
 
 ````js
 seajs.use(['$', 'placeholder'], function($, placeholder) {
     $('#i-3').attr('placeholder', '后来加上的placeholder');
     placeholder('#i-3');
+
+    $('#b-3').click(function() {
+        $('#i-3').attr('placeholder', '再次更换');
+        placeholder('#i-3');
+    });
 });
 ````
