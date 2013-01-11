@@ -35,7 +35,10 @@ define(function(require, exports, module) {
                 var $this = this;
                 $this
                     .filter((isInputSupported ? 'textarea' : ':input') + '[placeholder]')
-                    .not('.placeholder')
+                    .unbind({
+                        'focus.placeholder': clearPlaceholder,
+                        'blur.placeholder': setPlaceholder
+                    })
                     .bind({
                         'focus.placeholder': clearPlaceholder,
                         'blur.placeholder': setPlaceholder
@@ -186,7 +189,7 @@ define(function(require, exports, module) {
                 $input = $(input),
                 $origInput = $input,
                 id = this.id;
-            if (input.value == '') {
+            if ($(input).val() == '') {
                 if (input.type == 'password') {
                     if (!$input.data('placeholder-textinput')) {
                         try {

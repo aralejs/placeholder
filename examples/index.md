@@ -17,7 +17,7 @@
 
 > use 本组件后，页面上的 input 和 textarea 里的 placeholder 属性会自动被解析。
 
-<input id="i-1" placeholder="我是placeholder哦"></input>
+<input id="i-1" placeholder="我是placeholder哦">
 
 <button id="b-1">点我获取input的value</button>
 
@@ -41,5 +41,16 @@ seajs.use(['$', 'placeholder'], function($, placeholder){
     $('#b-2').click(function(){
         placeholder($('<input placeholder="动态创建的placeholder" /><br />').appendTo($('#container')));
     });
+});
+````
+
+## 示例三：绑定多次
+
+<input id="i-3" placeholder="xxx">
+
+````js
+seajs.use(['$', 'placeholder'], function($, placeholder) {
+    $('#i-3').attr('placeholder', '后来加上的placeholder');
+    placeholder($('#i-3'));
 });
 ````
