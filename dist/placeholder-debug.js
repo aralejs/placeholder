@@ -129,7 +129,8 @@ define("arale/placeholder/1.0.1/placeholder-debug", [ "$-debug" ], function(requ
         }
         function clearPlaceholder(event, value) {
             var input = this, $input = $(input);
-            if (input.value == $input.attr("placeholder") && $input.hasClass("placeholder")) {
+            // 修改演示四出现的问题
+            if ((input.value == $input.attr("placeholder") || input.value == "") && $input.hasClass("placeholder")) {
                 if ($input.data("placeholder-password")) {
                     $input = $input.hide().next().show().attr("id", $input.removeAttr("id").data("placeholder-id"));
                     // If `clearPlaceholder` was called from `$.valHooks.input.set`

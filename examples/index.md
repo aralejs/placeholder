@@ -61,3 +61,18 @@ seajs.use(['$', 'placeholder'], function($, placeholder) {
     });
 });
 ````
+
+## 示例四：blur 事件次序的诡异问题
+
+> 切 tab 可以触发。
+
+<input id="i-4" placeholder="输入框">
+
+
+````js
+seajs.use(['$', 'placeholder'], function($, placeholder) {
+    $('#i-4').blur(function() {
+        $('#i-4').val($.trim($('#i-4').val()));
+    });
+});
+````
