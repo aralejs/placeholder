@@ -1,7 +1,7 @@
 THEME = $(HOME)/.spm/themes/arale
 
 build-doc:
-	@nico build -v -C $(THEME)/nico.js
+	@nico build -C $(THEME)/nico.js
 
 debug:
 	@nico server -C $(THEME)/nico.js --watch debug
@@ -13,7 +13,6 @@ watch:
 	@nico server -C $(THEME)/nico.js --watch
 
 publish-doc: clean build-doc
-	@rm -fr _site/sea-modules
 	@spm publish --doc _site
 
 clean:

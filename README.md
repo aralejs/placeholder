@@ -2,7 +2,7 @@
 
 ---
 
-[![Build Status](https://secure.travis-ci.org/aralejs/placeholder.png)](https://travis-ci.org/aralejs/placeholder)
+[![Build Status](https://travis-ci.org/aralejs/placeholder.png?branch=master)](https://travis-ci.org/aralejs/placeholder)
 
 针对不支持 Html5 placeholder 的占位符兼容解决方案。本组件在已经支持 placeholder 的浏览器下不会做任何事，切记。
 

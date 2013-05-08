@@ -1,7 +1,8 @@
 define(function(require) {
 
+    var expect = require('expect');
     var $ = require('$');
-    var placeholder = require('../src/placeholder');
+    var placeholder = require('placeholder');
     var input;
 
     describe('placeholder', function() {
