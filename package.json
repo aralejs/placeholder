@@ -9,6 +9,11 @@
         "type": "git",
         "url": "https://github.com/aralejs/placeholder"
     },
+    "author": "偏右 <afc163@gmail.com>",
+    "maintainers": [
+        "偏右 <afc163@gmail.com>",
+        "南伯 <me@lepture.com>"
+    ],
     "bugs": {
         "url": "https://github.com/aralejs/placeholder/issues"
     },
