@@ -16,6 +16,8 @@
 
 同时利用 jQuery 的事件代理，保证了所有表单的 submit 事件也不会受到影响。
 
+> 注意要使用 jQuery 对象的 submit 方法取代原生的 submit 方法，才能正确拦截所有绑定了 placeholder 的 input 对象。
+
 ## 使用说明
 
 ### placeholder(element)
