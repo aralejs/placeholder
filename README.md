@@ -41,3 +41,13 @@
         placeholder('#test'); 
     });
     ```
+
+3. 只能使用原生对象提交表单时，可能需要手动清除对应 placeholder 的 value。
+
+```js
+placeholder.clear('#test-form');  // 这个表单里的 input 的 placeholder 值不会被提交
+```
+
+```js
+placeholder.clear('#test-input1, #test-input2'); // 指定的输入框的 placeholder 值不会被提交
+```

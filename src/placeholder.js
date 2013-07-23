@@ -78,10 +78,6 @@ define(function(require, exports, module) {
                 }
             };
 
-
-            //isInputSupported || (valHooks.input = hooks);
-            //isTextareaSupported || (valHooks.textarea = hooks);
-
             // 这里的修改是为了防止别的hooks被覆盖
             if(!isInputSupported){
                 var _old = valHooks.input;
@@ -167,6 +163,7 @@ define(function(require, exports, module) {
         function clearPlaceholder(event, value) {
             var input = this,
                 $input = $(input);
+
             // 修改演示四出现的问题
             if ((input.value == $input.attr('placeholder') || input.value == '')
                 && $input.hasClass('placeholder')) {
@@ -240,5 +237,27 @@ define(function(require, exports, module) {
     // 默认运行，这样就不需要手动调用
     placeholder();
 
+    // 提供清除 input.value 的方法
+    placeholder.clear = function(element) {
+        element = $(element);
+        if (element[0].tagName === 'FORM') {
+            // 寻找表单下所有的 input 元素
+            clearInput(element.find('input.placeholder, textarea.placeholder'));
+        } else {
+            // 清除指定的 input 元素
+            clearInput(element);
+        }
+        function clearInput(input) {
+            input.each(function(i, item) {
+                item = $(item);
+                if (item[0].value === item.attr('placeholder') &&
+                    item.hasClass('placeholder')) {
+                    item[0].value = ''; // 置空避免表单提交
+                }
+            });
+        }
+    };
+
     module.exports = placeholder;
+
 });
