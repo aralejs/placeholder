@@ -68,6 +68,16 @@ define(function(require) {
                 expect(input.attr('value')).to.be('再次更换');
                 expect(input.val()).to.be('');
             });
+            
+            it('placeholder.clear', function() {
+                placeholder(input);
+                expect(input.attr('value')).to.be('placeholder');
+                expect(input.val()).to.be('');
+                
+                placeholder.clear(input);
+                expect(input.attr('value')).to.be('');
+                expect(input.val()).to.be('');
+            });         
         }
 
     });
