@@ -2,6 +2,10 @@
 
 ---
 
+## 1.1.0
+
+`tag:improved` #5 提供清除 input.value 的方法 `placeholder.clear`。
+
 ## 1.0.1
 
 `tag:improved` 支持重新绑定 placeholder , 见演示三。

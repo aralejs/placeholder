@@ -12,8 +12,8 @@
 ````js
 seajs.use(['placeholder', '$'], function(placeholder, $) {
     $('#test-button').click(function() {
-        $('#test-form').submit();
-        //$('#test-form')[0].submit();  // 请使用 jQuery 对象的 submit 方法
+        //$('#test-form').submit();
+        $('#test-form')[0].submit();  // 请使用 jQuery 对象的 submit 方法
     });
 });
 ````
