@@ -1,4 +1,4 @@
-# 浏览器兼容 placeholder 解决方案
+# 基本示例
 
 - order: 1
 
