@@ -5,8 +5,8 @@
 > 注意，本模块后续将删除。请使用 [gallery/placeholders](https://spmjs.org/gallery/placeholders/) 来代替，使用方式参考 [文档](http://jamesallardice.github.io/Placeholders.js/)。
 
 ```js
-seajs.use('gallery/placeholders/3.0.0/placeholders', function() {
-    Placeholders.enable();
+seajs.use('gallery/placeholders/3.0.0/placeholders', function(Placeholders) {
+    // Placeholders.enable();
     // Placeholders.disable();
 });
 ```
